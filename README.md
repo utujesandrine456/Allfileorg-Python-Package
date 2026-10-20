@@ -1,0 +1,163 @@
+# allfileorg
+
+[![PyPI version](https://img.shields.io/badge/pypi-v1.0.0-blue.svg)](https://pypi.org/project/allfileorg/)
+[![Python versions](https://img.shields.io/badge/python-3.8+-brightgreen.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**`allfileorg`** is an intelligent, high-speed, and reliable file organization package for your PC and servers. It automatically scans any cluttered directory (e.g. `Downloads`, `Desktop`, or custom project folders) and cleanly organizes files into categorized folders: Word documents (`.docx`, `.doc`), PDFs (`.pdf`), Spreadsheets, Images, Videos, Code, Archives, and more.
+
+---
+
+## Key Features
+
+- 📂 **Smart File Categorization**: Organizes `.docx`, `.pdf`, `.png`, `.xlsx`, `.zip`, `.py`, and 50+ formats out of the box.
+- ⚡ **Zero-Config CLI**: Run `allfileorg` (or `fileorg`) directly from your command prompt or terminal.
+- 🛡️ **Safe by Design**:
+  - **Dry Run Mode**: Preview changes before moving any files (`--dry-run`).
+  - **Undo / Rollback**: Safely revert organized files back to their original positions (`--undo`).
+  - **Collision Resolution**: Automatically handles file name conflicts without overwriting (`file (1).docx`).
+- 🔄 **Recursive Support**: Organize nested folder structures (`--recursive`).
+- 📅 **Date Organization**: Optionally organize files by year and month subfolders (`--by-date`).
+- ⚙️ **Custom Rules**: Easily supply custom JSON configuration to define your own categories and extensions.
+- 🐍 **Clean Python API**: Import and use `fileorg` directly in your Python scripts and pipelines.
+
+---
+
+## Default Category Mapping
+
+| Category | Formats / Extensions |
+| :--- | :--- |
+| **Documents** | `.docx`, `.doc`, `.txt`, `.rtf`, `.odt`, `.tex`, `.md`, `.pages`, `.dotx` |
+| **PDFs** | `.pdf` |
+| **Spreadsheets** | `.xlsx`, `.xls`, `.csv`, `.tsv`, `.ods`, `.numbers`, `.xlsm` |
+| **Presentations** | `.pptx`, `.ppt`, `.odp`, `.key`, `.ppsx` |
+| **Images** | `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.svg`, `.webp`, `.tiff`, `.ico`, `.heic`, `.psd`, `.ai` |
+| **Videos** | `.mp4`, `.mkv`, `.mov`, `.avi`, `.wmv`, `.flv`, `.webm`, `.m4v` |
+| **Audio** | `.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, `.wma` |
+| **Archives** | `.zip`, `.tar`, `.gz`, `.7z`, `.rar`, `.bz2`, `.xz`, `.iso` |
+| **Code** | `.py`, `.js`, `.ts`, `.html`, `.css`, `.json`, `.java`, `.cpp`, `.c`, `.cs`, `.go`, `.rs`, `.sql`, `.sh`, `.bat` |
+| **Executables** | `.exe`, `.msi`, `.apk`, `.bin`, `.dmg`, `.deb`, `.appimage` |
+| **Ebooks** | `.epub`, `.mobi`, `.azw`, `.azw3`, `.djvu` |
+| **Fonts** | `.ttf`, `.otf`, `.woff`, `.woff2` |
+| **Others** | Unrecognized file extensions |
+
+---
+
+## Installation
+
+```bash
+pip install allfileorg
+```
+
+Or install in editable / development mode locally:
+
+```bash
+git clone https://github.com/utujesandrine456/allfileorg.git
+cd allfileorg
+pip install -e .
+```
+
+---
+
+## Command Line Usage (CLI)
+
+Once installed, use the `allfileorg` command from any terminal:
+
+### 1. Organize Current Directory
+```bash
+allfileorg
+```
+
+### 2. Organize a Specific Folder (e.g., Downloads or Desktop)
+```bash
+allfileorg ~/Downloads
+# Or on Windows:
+allfileorg "C:\Users\username\Downloads"
+```
+
+### 3. Dry-Run Mode (Preview Before Moving)
+```bash
+allfileorg ~/Downloads --dry-run
+```
+
+### 4. Organize Recursively (Include Subfolders)
+```bash
+allfileorg ~/Downloads --recursive
+```
+
+### 5. Undo / Rollback Organization
+```bash
+allfileorg ~/Downloads --undo
+```
+
+### 6. Move to a Separate Target Directory
+```bash
+allfileorg ~/Downloads --target ~/OrganizedFiles
+```
+
+### 7. Organize by Date Subfolders
+```bash
+allfileorg ~/Downloads --by-date
+```
+*Creates structures like `Documents/2026/05-May/report.docx`.*
+
+### 8. Use Custom Rules JSON
+```bash
+allfileorg ~/Downloads --config custom_rules.json
+```
+
+---
+
+## Python API Usage
+
+You can seamlessly integrate `fileorg` into your own Python applications.
+
+### Quick Start
+```python
+from fileorg import organize_directory, undo_organization
+
+# Organize a folder
+summary = organize_directory("C:/Users/username/Downloads")
+print(f"Moved {summary.total_moved} files into categories!")
+
+# Revert organization if needed
+reverted, failed, errors = undo_organization("C:/Users/username/Downloads")
+print(f"Successfully restored {reverted} files.")
+```
+
+### Advanced Usage with `FileOrganizer` Class
+```python
+from fileorg import FileOrganizer
+
+organizer = FileOrganizer(
+    source_dir="C:/Users/username/Downloads",
+    target_dir="C:/Users/username/Organized",
+    conflict_strategy="rename",  # "rename", "skip", or "overwrite"
+    dry_run=False,
+    recursive=True,
+    by_date=True,
+)
+
+summary = organizer.organize()
+
+print(f"Scanned: {summary.total_files_scanned}")
+print(f"Moved:   {summary.total_moved}")
+print("Breakdown by category:", summary.category_counts)
+```
+
+---
+
+## Running Tests
+
+Run the included unit test suite:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py"
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+"# Allfileorg-Python-Package" 
