@@ -1,0 +1,47 @@
+[
+  {
+    "source": "D:\\Python Package\\documents\\PyPI-Recovery-Codes-Utuje-2026-10-05T20_02_23.460158.txt",
+    "destination": "D:\\Python Package\\documents\\Documents\\PyPI-Recovery-Codes-Utuje-2026-10-05T20_02_23.460158.txt",
+    "category": "Documents",
+    "file_size": 135,
+    "timestamp": "2026-10-05T22:17:13.766600",
+    "status": "moved",
+    "error_message": null
+  },
+  {
+    "source": "D:\\Python Package\\documents\\TradeWise AI_ An Event-Oriented Artificial Intelligence Framework for Predicting Irish Potato Price Changes in Rwanda.pdf",
+    "destination": "D:\\Python Package\\documents\\PDFs\\TradeWise AI_ An Event-Oriented Artificial Intelligence Framework for Predicting Irish Potato Price Changes in Rwanda.pdf",
+    "category": "PDFs",
+    "file_size": 1725541,
+    "timestamp": "2026-10-05T22:17:13.766600",
+    "status": "moved",
+    "error_message": null
+  },
+  {
+    "source": "D:\\Python Package\\documents\\UWASE UTUJE SANDRINE_Resume.pdf",
+    "destination": "D:\\Python Package\\documents\\PDFs\\UWASE UTUJE SANDRINE_Resume.pdf",
+    "category": "PDFs",
+    "file_size": 53372,
+    "timestamp": "2026-10-05T22:17:13.766600",
+    "status": "moved",
+    "error_message": null
+  },
+  {
+    "source": "D:\\Python Package\\documents\\UWASE_UTUJE_SANDRINE_FlowCV_Resume_2026-10-05.pdf",
+    "destination": "D:\\Python Package\\documents\\PDFs\\UWASE_UTUJE_SANDRINE_FlowCV_Resume_2026-10-05.pdf",
+    "category": "PDFs",
+    "file_size": 75870,
+    "timestamp": "2026-10-05T22:17:13.776908",
+    "status": "moved",
+    "error_message": null
+  },
+  {
+    "source": "D:\\Python Package\\documents\\Uwase_Utuje_Sandrine_TradeWise_AI_Research.docx",
+    "destination": "D:\\Python Package\\documents\\Documents\\Uwase_Utuje_Sandrine_TradeWise_AI_Research.docx",
+    "category": "Documents",
+    "file_size": 3392596,
+    "timestamp": "2026-10-05T22:17:13.776908",
+    "status": "moved",
+    "error_message": null
+  }
+]

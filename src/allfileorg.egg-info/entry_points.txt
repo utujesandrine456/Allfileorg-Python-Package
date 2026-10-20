@@ -1,0 +1,3 @@
+[console_scripts]
+allfileorg = fileorg.cli:main
+fileorg = fileorg.cli:main

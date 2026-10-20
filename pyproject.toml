@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allfileorg"
+version = "1.0.0"
+description = "Automatic and intelligent file organizer for desktops and directories."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "UWASE UTUJE Sandrine", email = "utujesandrine456@gmail.com" }
+]
+keywords = [
+    "file-organizer",
+    "automation",
+    "file-management",
+    "desktop-cleaner",
+    "pdf",
+    "docx",
+    "organizer",
+    "cli",
+    "allfileorg"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Topic :: System :: Filesystems",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "build>=0.10.0",
+    "twine>=4.0.0",
+]
+
+[project.scripts]
+allfileorg = "fileorg.cli:main"
+fileorg = "fileorg.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/utujesandrine456/allfileorg"
+Repository = "https://github.com/utujesandrine456/allfileorg"
+Issues = "https://github.com/utujesandrine456/allfileorg/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

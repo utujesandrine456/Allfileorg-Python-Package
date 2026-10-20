@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/allfileorg.egg-info/PKG-INFO
+src/allfileorg.egg-info/SOURCES.txt
+src/allfileorg.egg-info/dependency_links.txt
+src/allfileorg.egg-info/entry_points.txt
+src/allfileorg.egg-info/requires.txt
+src/allfileorg.egg-info/top_level.txt
+src/fileorg/__init__.py
+src/fileorg/cli.py
+src/fileorg/organizer.py
+src/fileorg/rules.py
+tests/test_fileorg.py
